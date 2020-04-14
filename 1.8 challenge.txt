@@ -1,0 +1,66 @@
+오후 8:27 2020-04-14
+1.8 Challenge 
+
+"""
+As you can see, the code is broken.
+Create the missing functions, use default arguments.
+Sometimes you have to use 'return' and sometimes you dont.
+Start by creating the functions
+"""
+
+# \/\/\/\/\/\/\  DO NOT TOUCH AREA  \/\/\/\/\/\/\ #
+
+days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+
+print("Is Wed on 'days' list?", is_on_list(days, "Wed"))
+
+print("The fourth item in 'days' is:", get_x(days, 3))
+
+add_x(days, "Sat")
+print(days)
+
+remove_x(days, "Mon")
+print(days)
+
+
+# /\/\/\/\/\/\/\ END DO NOT TOUCH AREA /\/\/\/\/\/\/\ #
+
+result: 
+Is Wed on 'days' list? True 
+The fourth item in 'days' is: Thu
+['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Sat']
+['Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Sat']
+
+
+
+
+my code:
+
+def is_on_list(a, b):
+  return b in a
+
+def get_x(a, b):
+  return a[b]
+
+def add_x(a, b):
+  a.append(b)
+  return a
+
+def remove_x(a, b):
+  a.remove(b)
+  return a
+
+
+days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+
+#1 리스트에 수요일있음? True 출력
+print("Is Wed on 'days' list?", is_on_list(days, "Wed"))
+
+#2 리스트에 4번째 아이템 뭐임? 목요일 Thu 출력
+print("The fourth item in 'days' is:", get_x(days, 3))
+
+#3 전체 리스트 끝에 토요일 Sat 추가 출력해
+print(add_x(days, "Sat"))
+
+#4 방금 리스트에서 맨앞에 Mon 빼고 출력해
+print(remove_x(days, "Mon"))
